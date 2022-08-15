@@ -1,17 +1,17 @@
 [tool.poetry]
+authors = ["Robert Durica <r.durica@gmail.com>"]
+description = "Portfolio & Blog webside in django"
+license = "MIT"
 name = "portfolio"
 version = "0.1.0"
-description = "Portfolio & Blog webside in django"
-authors = ["Robert Durica <r.durica@gmail.com>"]
-license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
 Django = "^4.1"
 mysqlclient = "^2.1.1"
+python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
