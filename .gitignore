@@ -1,0 +1,10 @@
+__pycache__*
+media
+.idea
+node_modules
+.venv
+db.sqlite3
+.env
+docker-compose.yaml
+requirements.txt
+logs
