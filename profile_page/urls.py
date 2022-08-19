@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 
-from .views import HomePage
+from profile_page.views import HomePage
 
 app_name = "profile_page"
 urlpatterns = [
