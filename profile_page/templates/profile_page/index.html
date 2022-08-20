@@ -1,148 +1,19 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<!-- Slider Start -->
-<section class="slider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Robert Ďurica</h1>
-          <p>System Engineering Supervisor</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Wrapper Start -->
-<section class="about section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <div class="block">
-          <div class="section-title">
-            <h2>About Me</h2>
-            <p>Programming is not a job. It is a lifestyle</p>
-          </div>
-          <p>
-            My name is Robert Ďurica. I was born in Slovakia but currently live in Czech Republic with girlfriend and one child. For over 5+ years, I am developing software. I mainly focus on the development of web applications and information
-            systems of various kinds. During my work places high emphasis on quality, stability, speed and application security. Currently working as Systems engineering lead so development is in second place (mostly in my free time).
-          </p>
-        </div>
-      </div>
-      <!-- .col-md-7 close -->
-      <div class="col-md-5">
-        <div class="block">
-          <img src="{% static 'images/wrapper-img.png' %}" alt="Img" />
-        </div>
-      </div>
-      <!-- .col-md-5 close -->
-    </div>
-  </div>
-</section>
+<!-- Header -->
+{% include "profile_page/sections/header.html" %}
 
-<section class="feature bg-2">
-  <div class="container">
-    <div class="row justify-content-end">
-      <div class="col-md-6">
-        <h2 class="section-subtitle">WE BELIEVE IN GREAT IDEAS</h2>
-        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a href="#" class="btn btn-view-works">View Works</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Service Start -->
-<section class="service">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <div class="section-title">
-          <h2>My Stack</h2>
-          <p>It is essential to have good tools, but it is also essential that the tools should be used in the right way. <br />-Wallace D. Wattles</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-brands fa-python fa-3x"></i>
-          <h4>Python</h4>
-          <p>Primary & favorite language for development. Easy for start, hard to master</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <img src="https://img.icons8.com/windows/64/000000/django.png" style="width: 50px" />
-          <h4>Django</h4>
-          <p>During my carrier i try many web frameworks in multiple languages but this I like the most</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-solid fa-database fa-3x"></i>
-          <h4>Database</h4>
-          <p>I have experience with relational databases specifialy MariaDB (MySql)</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-brands fa-docker fa-3x"></i>
-          <h4>Docker</h4>
-          <p>Nowdays foundation for web development. I use self-hosted docker hub</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-brands fa-git-alt fa-3x"></i>
-          <h4>Git</h4>
-          <p>In case of fire, git commit, git push and leave the building</p>
-        </div>
-      </div>
+<!-- About me -->
+{% include "profile_page/sections/about_me.html" %}
 
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <img src="https://img.icons8.com/ios-filled/50/000000/visual-studio.png" style="width: 50px" />
-          <h4>Visual Studio Code</h4>
-          <p>In past I used JetBrains products. Now I use this free IDE</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-brands fa-linux fa-3x"></i>
-          <h4>Linux</h4>
-          <p>All my applications are deployed on my VPS where i use linux</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="service-item">
-          <i class="fa-brands fa-apple fa-3x"></i>
-          <h4>MacOS</h4>
-          <p>Stable local environment is a base condition to create a good product</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Call to action Start -->
+<!-- My Journey -->
+{% include "profile_page/sections/my_journey.html" %}
 
-<section class="call-to-action bg-1 section-sm overly">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h2 class="mb-3">We design delightful digital experiences.</h2>
-          <p>
-            Read more about what we do and our philosophy of design. Judge for yourself The work and results <br />
-            we’ve achieved for other clients, and meet our highly experienced Team who just love to design.
-          </p>
-          <a class="btn btn-main btn-solid-border" href="contact.html">Tell Us Your Story</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- My stack -->
+{% include "profile_page/sections/my_stack.html" %}
+
+<!-- Projects -->
+{% include "profile_page/sections/projects.html" %}
 
 <!-- Content Start -->
 <section class="testimonial">
@@ -236,22 +107,7 @@
 </section>
 
 <!-- footer Start -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="footer-manu">
-          {% comment %}
-          <ul>
-            <li><a href="about.html">Blog</a></li>
-            <li><a href="about.html">Snippets</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          {% endcomment %}
-        </div>
-        <p class="copyright mb-0">Copyright 2022 &copy; Robert Ďurica</p>
-      </div>
-    </div>
-  </div>
-</footer>
+{% include "profile_page/_footer.html" %}
+
+<!-- End -->
 {% endblock %}
