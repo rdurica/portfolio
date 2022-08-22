@@ -14,6 +14,10 @@ import os
 from os import environ as env
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv(os.getenv("ENVIRONMENT_FILE", ".env"))
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,6 +37,7 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    "captcha",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
