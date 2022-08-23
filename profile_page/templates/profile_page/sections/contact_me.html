@@ -5,15 +5,12 @@
       <div class="col-12">
         <div class="section-title text-center">
           <h2>Contact me</h2>
-          <p>
-            I Have always open mind for new opportunities to move on and improve my skills. <br />
-            Feel free to contact me.
-          </p>
+          <p>I Have always open mind for new opportunities to move on and improve my skills. <br />Feel free to contact me with this form or directly by email r.durica@robbyte.net</p>
         </div>
       </div>
     </div>
-    <div class="row align-items-center">
-      <div class="col-md-6">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
         {% if messages %} {% for message in messages %}
         <div class="alert alert-{{message.tags}}" role="alert">{{ message }}</div>
         {% endfor %} {% else %}
@@ -25,20 +22,6 @@
           <input type="submit" value="Send message" class="btn btn-view-works" />
         </form>
         {% endif %}
-      </div>
-      <div class="col-md-5 col-md-offset-1">
-        <div class="testimonial-carousel text-center">
-          <div class="testimonial-slider owl-carousel">
-            <div>
-              <i class="ion-quote"></i>
-              <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
-              <div class="user">
-                <img src="{% static 'images/me.jpg' %}" alt="Pepole" />
-                <p><span>Robert Ďurica</span> Systems Engineering Lead</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
