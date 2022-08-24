@@ -1113,9 +1113,15 @@ ul.dropdown-menu li {
 }
 
 .feature .btn-view-works {
-  background: #655E7A;
+  background: black;
   color: #fff;
   padding: 10px 20px;
+}
+
+.btn-view-works:hover{
+    background: whitesmoke;
+    color: black;
+    border: 1px solid black;
 }
 
 .portfolio-work {
