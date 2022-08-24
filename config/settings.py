@@ -31,7 +31,7 @@ SECRET_KEY = env.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", False) == "True"
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "rdurica.robbyte.net"]
 
 
 # Application definition
