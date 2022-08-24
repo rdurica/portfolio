@@ -54,6 +54,20 @@ Pillow = ">=6.2.0"
 test = ["testfixtures"]
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "mysqlclient"
 version = "2.1.1"
 description = "Python interface to MySQL"
@@ -103,7 +117,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "6e49f1a4a8e18bc41eba1466f8ad47e85b956faebaae709d0a6c89d4de2d919a"
+content-hash = "18ca8d7b4c9854d0f6cab733353153a66e30425533a46dd8140d1381c778fa6c"
 
 [metadata.files]
 asgiref = [
@@ -113,6 +127,7 @@ asgiref = [
 django = []
 django-ranged-response = []
 django-simple-captcha = []
+gunicorn = []
 mysqlclient = []
 pillow = []
 python-dotenv = []

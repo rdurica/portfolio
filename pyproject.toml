@@ -11,6 +11,7 @@ mysqlclient = "^2.1.1"
 python = "^3.10"
 django-simple-captcha = "^0.5.17"
 python-dotenv = "^0.20.0"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 
