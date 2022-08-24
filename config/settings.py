@@ -134,7 +134,7 @@ STATIC_ROOT = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
+CSRF_TRUSTED_ORIGINS = ["https://*.robbyte.net", "http://*.127.0.0.1"]
 EMAIL_BACKEND = env.get("EMAIL_BACKEND")
 EMAIL_HOST = env.get("EMAIL_HOST")
 EMAIL_PORT = env.get("EMAIL_PORT")

@@ -11,7 +11,7 @@ bind = "0.0.0.0:8000"
 # Redirect stdout/stderr to log file
 capture_output = True
 # PID file so you can easily fetch process ID
-pidfile = "/var/run/weatherkh.pid"
+pidfile = "/var/run/portfolio.pid"
 # Write access and error info to /var/log
 accesslog = "/var/log/portfolio-access.log"
 errorlog = "/var/log/portfolio-error.log"
