@@ -48,6 +48,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "django.middleware.cache.UpdateCacheMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -141,3 +144,13 @@ EMAIL_PORT = env.get("EMAIL_PORT")
 EMAIL_HOST_USER = env.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env.get("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
+
+CACHE_TTL = 60 * 15
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": env.get("REDIS_LOCATION"),
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
+        "KEY_PREFIX": env.get("REDIS_KEY_PREFIX"),
+    }
+}

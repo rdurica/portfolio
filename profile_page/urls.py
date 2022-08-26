@@ -13,11 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
 from django.urls import path
+from django.views.decorators.cache import cache_page
 
 from profile_page.views import HomePage
 
+CACHE_TTL = getattr(settings, "CACHE_TTL", DEFAULT_TIMEOUT)
+
 app_name = "profile_page"
 urlpatterns = [
-    path("", HomePage.as_view(), name="home"),
+    path("", cache_page(CACHE_TTL)(HomePage.as_view()), name="home"),
 ]
