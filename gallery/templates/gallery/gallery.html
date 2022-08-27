@@ -16,162 +16,24 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <div class="portfolio-menu">
-            <div class="btn-group btn-group-toggle justify-content-center" data-toggle="buttons">
-              <label class="btn btn-sm btn-primary active"> <input type="radio" name="shuffle-filter" value="all" checked="checked" />All </label>
-              <label class="btn btn-sm btn-primary"> <input type="radio" name="shuffle-filter" value="design" />UI/UX Design </label>
-              <label class="btn btn-sm btn-primary"> <input type="radio" name="shuffle-filter" value="video" />Video </label>
-              <label class="btn btn-sm btn-primary"> <input type="radio" name="shuffle-filter" value="illustration" />ILLUSTRATION </label>
-            </div>
-          </div>
-          <div class="row shuffle-wrapper shuffle" style="position: relative; overflow: hidden; height: 624px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s">
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["design"]'
-              style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity"
-            >
-              <img src="images/portfolio/work1.jpg" alt="" />
+          <div class="row shuffle-wrapper shuffle">
+            {% for item in gallery_items %}
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+              <img src="https://images.pexels.com/photos/13162215/pexels-photo-13162215.jpeg?cs=srgb&dl=pexels-ethan-p-13162215.jpg&fm=jpg" alt="" style="" />
               <div class="portfolio-hover">
                 <div class="portfolio-content">
-                  <a href="images/portfolio/work1.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
+                  <h3>{{item.title}}</h3>
+
+                  <p>{{item.description}}</p>
+                  <a href="{{item.url}}" target="_blank" rel="noopener noreferrer"><strong> > Visit page <</strong></a>
                 </div>
               </div>
             </div>
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["design","illustration"]'
-              style="
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                visibility: visible;
-                will-change: transform;
-                opacity: 1;
-                transform: translate(380px) scale(1);
-                transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: transform, opacity;
-              "
-            >
-              <img src="images/portfolio/work2.jpg" alt="" />
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work2.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["illustration"]'
-              style="
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                visibility: visible;
-                will-change: transform;
-                opacity: 1;
-                transform: translate(760px) scale(1);
-                transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: transform, opacity;
-              "
-            >
-              <img src="images/portfolio/work3.jpg" alt="" />
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work3.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["video","illustration"]'
-              style="
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                visibility: visible;
-                will-change: transform;
-                opacity: 1;
-                transform: translate(0px, 312px) scale(1);
-                transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: transform, opacity;
-              "
-            >
-              <img src="images/portfolio/work4.jpg" alt="" />
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work4.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["design","illustration"]'
-              style="
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                visibility: visible;
-                will-change: transform;
-                opacity: 1;
-                transform: translate(380px, 312px) scale(1);
-                transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: transform, opacity;
-              "
-            >
-              <img src="images/portfolio/work5.jpg" alt="" />
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work5.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-sm-6 portfolio-item shuffle-item shuffle-item--visible"
-              data-groups='["design","video"]'
-              style="
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                visibility: visible;
-                will-change: transform;
-                opacity: 1;
-                transform: translate(760px, 312px) scale(1);
-                transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: transform, opacity;
-              "
-            >
-              <img src="images/portfolio/work6.jpg" alt="" />
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work6.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-{% for item in gallery_items %} <strong>{{item.title}}</strong> <br />
-{{item.description}} <br />
-{{item.url}} <br />
-<br />
-{% comment %} end for {% endcomment %} {% endfor %} {% endblock %}
+{% endblock %}

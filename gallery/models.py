@@ -12,4 +12,4 @@ class Item(models.Model):
     is_enabled: bool = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return self.name
+        return self.title

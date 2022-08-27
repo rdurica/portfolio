@@ -1170,6 +1170,8 @@ ul.dropdown-menu li {
 .portfolio-item img {
   width: 100%;
   height: auto;
+  border: 5px solid white;
+  max-height: 225px
 }
 
 .portfolio-item:hover .portfolio-hover {
@@ -1188,7 +1190,7 @@ ul.dropdown-menu li {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(60, 55, 55, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
   transition: .3s ease;
