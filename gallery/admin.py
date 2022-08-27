@@ -7,7 +7,7 @@ from gallery.models import Item
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
     list_display = [
-        "name",
+        "title",
         "url",
         "is_enabled",
     ]
