@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "profile_page.apps.ProfilePageConfig",
+    "gallery.apps.GalleryConfig",
 ]
 
 MIDDLEWARE = [
@@ -148,7 +149,7 @@ EMAIL_USE_TLS = True
 CACHE_TTL = 60 * 15
 CACHES = {
     "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
+        "BACKEND": env.get("CACHE_BACKEND"),
         "LOCATION": env.get("REDIS_LOCATION"),
         "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
         "KEY_PREFIX": env.get("REDIS_KEY_PREFIX"),
