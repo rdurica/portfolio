@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "profile_page.apps.ProfilePageConfig",
     "gallery.apps.GalleryConfig",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,19 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = "static/"
+
+# AWS
+AWS_ACCESS_KEY_ID = env.get("AWS_ACCESS_KEY_ID")
+AWS_S3_REGION_NAME = "eu-west-2"
+AWS_SECRET_ACCESS_KEY = env.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = env.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_FILE_OVERWRITE = False
+AWS_QUERYSTRING_AUTH = True
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_S3_OBJECT_PARAMETERS = {
+    "CacheControl": "max-age=86400",
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

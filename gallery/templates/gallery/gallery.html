@@ -19,11 +19,10 @@
           <div class="row shuffle-wrapper shuffle">
             {% for item in gallery_items %}
             <div class="col-lg-4 col-sm-6 portfolio-item">
-              <img src="https://images.pexels.com/photos/13162215/pexels-photo-13162215.jpeg?cs=srgb&dl=pexels-ethan-p-13162215.jpg&fm=jpg" alt="" style="" />
+              <img src="{{item.image.url}}" alt="" style="" />
               <div class="portfolio-hover">
                 <div class="portfolio-content">
                   <h3>{{item.title}}</h3>
-
                   <p>{{item.description}}</p>
                   <a href="{{item.url}}" target="_blank" rel="noopener noreferrer"><strong> > Visit page <</strong></a>
                 </div>
