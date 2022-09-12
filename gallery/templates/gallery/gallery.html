@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Some of our latest projects.</h1>
+          <p>Don’t just take our word for it. Check out some of our latest work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="portfolio-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="row shuffle-wrapper shuffle">
+            {% for item in gallery_items %}
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+              <img src="{{item.image.url}}" alt="" style="" />
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <h3>{{item.title}}</h3>
+                  <p>{{item.description}}</p>
+                  <a href="{{item.url}}" target="_blank" rel="noopener noreferrer"><strong> > Visit page <</strong></a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
