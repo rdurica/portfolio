@@ -81,6 +81,14 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cleanup"
+version = "6.0.0"
+description = "Deletes old files."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "django-ranged-response"
 version = "0.2.0"
 description = "Modified Django FileResponse that adds Content-Range headers."
@@ -317,7 +325,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "4e5cb9656f5b392c39c01a6d5d03814c1e9770a2c3ce1fa1cd2e92586a7a791d"
+content-hash = "e63aaaf667940e945b5799f2a056581ab7fc200689069d26c53985f61142833f"
 
 [metadata.files]
 asgiref = [
@@ -329,6 +337,7 @@ boto3 = []
 botocore = []
 deprecated = []
 django = []
+django-cleanup = []
 django-ranged-response = []
 django-redis = []
 django-simple-captcha = []

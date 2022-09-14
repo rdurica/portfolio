@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "profile_page.apps.ProfilePageConfig",
     "gallery.apps.GalleryConfig",
     "storages",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 MIDDLEWARE = [
