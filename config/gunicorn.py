@@ -9,7 +9,7 @@ workers = 2
 # The socket to bind
 bind = "0.0.0.0:8000"
 # Redirect stdout/stderr to log file
-capture_output = True
+# capture_output = True
 # PID file so you can easily fetch process ID
 pidfile = "/var/run/portfolio.pid"
 # Write access and error info to /var/log

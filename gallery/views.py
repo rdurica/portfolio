@@ -1,6 +1,3 @@
-from faulthandler import is_enabled
-from typing import List
-
 from django.views import generic
 
 from gallery.models import Item

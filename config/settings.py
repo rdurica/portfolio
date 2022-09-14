@@ -54,6 +54,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -133,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = "static/"
+STATIC_ROOT = BASE_DIR / "static"
 
 # AWS
 AWS_ACCESS_KEY_ID = env.get("AWS_ACCESS_KEY_ID")
@@ -159,8 +160,8 @@ EMAIL_PORT = env.get("EMAIL_PORT")
 EMAIL_HOST_USER = env.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env.get("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
-
-CACHE_TTL = 60 * 15
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+CACHE_TTL = 60 * 60
 CACHES = {
     "default": {
         "BACKEND": env.get("CACHE_BACKEND"),

@@ -1,6 +1,6 @@
 #!/bin/bash
 repository = portfolio
-tag = 0.5.0
+tag = 0.6.0
 platform = linux/amd64,linux/arm64
 
 build:
@@ -9,4 +9,4 @@ build:
 
 publish:
 	poetry export --without-hashes --output requirements.txt
-	docker buildx build --platform $(platform) --push -t docker.robbyte.net/$(repository):$(tag) .
+	docker buildx build --platform $(platform) --push -t rdurica/$(repository):$(tag) .

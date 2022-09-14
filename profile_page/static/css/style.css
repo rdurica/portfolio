@@ -1085,7 +1085,7 @@ ul.dropdown-menu li {
 }
 
 .feature {
-  background: url("../img/featue-bg.jpg");
+  background: url("../images/featue-bg.jpg");
   background-position: 50% 94px;
   display: block;
   position: relative;
@@ -2593,16 +2593,6 @@ ul.dropdown-menu li {
   box-shadow: none;
 }
 
-.coming-soon {
-  background: url("../images/backgrounds/coming-soon.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  padding: 70px 0;
-}
 
 @media (max-width: 400px) {
   .coming-soon {
