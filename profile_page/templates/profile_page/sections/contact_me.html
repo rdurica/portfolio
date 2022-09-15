@@ -13,7 +13,7 @@
       <div class="col-md-10">
         {% if messages %} {% for message in messages %}
         <div class="alert alert-{{message.tags}}" role="alert">{{ message }}</div>
-        {% endfor %} {% else %}
+        {% endfor %} {% endif %}
         <form action="{% url 'profile_page:home' %}" method="post">
           {% csrf_token %} {% if form.errors %}
           <div class="alert alert-danger" role="alert">{{ form.errors }}</div>
@@ -21,7 +21,6 @@
           <br />
           <input type="submit" value="Send message" class="btn btn-view-works" />
         </form>
-        {% endif %}
       </div>
     </div>
   </div>
