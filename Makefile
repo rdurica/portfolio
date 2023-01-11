@@ -1,6 +1,6 @@
 #!/bin/bash
 repository = portfolio
-tag = 0.6.2
+tag = 1.0.0
 platform = linux/amd64,linux/arm64
 
 build:
